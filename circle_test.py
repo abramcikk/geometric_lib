@@ -17,6 +17,10 @@ class CircleTestCase(unittest.TestCase):
         res = area(-1)
         self.assertEqual(res, "ERROR")
 
+    def test_circle_area_float(self):
+        res = area(1.5)
+        self.assertEqual(res, 7.0685834705770345)
+
     def test_circle_perimeter(self):
         res = perimeter(10)
         self.assertEqual(res, 62.83185307179586)
@@ -28,6 +32,10 @@ class CircleTestCase(unittest.TestCase):
     def test_circle_perimeter_minus(self):
         res = perimeter(-1)
         self.assertEqual(res, "ERROR")
+
+    def test_circle_perimeter_float(self):
+        res = perimeter(1.5)
+        self.assertEqual(res, 9.42477796076938)
 
 if __name__ == '__main__':
     unittest.main()

@@ -17,6 +17,10 @@ class RectangleTestCase(unittest.TestCase):
         res = area(-1, -1)
         self.assertEqual(res, "ERROR")
 
+    def test_rectangle_area_float(self):
+        res = area(1.5, 1.5)
+        self.assertEqual(res, 2.25)
+
     def test_rectangle_perimeter(self):
         res = perimeter(10, 10)
         self.assertEqual(res, 40)
@@ -28,6 +32,10 @@ class RectangleTestCase(unittest.TestCase):
     def test_rectangle_perimeter_minus(self):
         res = perimeter(-1, -1)
         self.assertEqual(res, "ERROR")
+
+    def test_rectangle_perimeter_float(self):
+        res = perimeter(1.5, 1.5)
+        self.assertEqual(res, 6)
 
 if __name__ == '__main__':
     unittest.main()
