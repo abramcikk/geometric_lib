@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - "tests408_100"
+
+  pull_request:
+    branches:
+      - "tests408_100"
+  workflow_dispatch:
+jobs:
+  build_linux:
+         architecture: x64
+          - name: CICD tests
+        run: |
+          python -m unittest "circle_test.py"
+          python -m unittest "triangle_test.py"
+          python -m unittest "rectangle_test.py"
+          python -m unittest "square_test.py"
+  build_windows:
+    runs-on: windows-latest
+    steps:
+         architecture: x64
+      - name: CICD tests
+        run: |
+          python -m unittest "circle_test.py"
+          python -m unittest "triangle_test.py"
+          python -m unittest "rectangle_test.py"
+          python -m unittest "square_test.py"
